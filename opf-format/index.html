@@ -1,0 +1,572 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0">
+    
+    
+      
+        <title>OPF Format - OpenPecha</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.82f3c0b9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#opf-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="OpenPecha" class="md-header__button md-logo" aria-label="OpenPecha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenPecha
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              OPF Format
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="OpenPecha" class="md-nav__button md-logo" aria-label="OpenPecha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    OpenPecha
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          OPF Format
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        OPF Format
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openpecha-repositories" class="md-nav__link">
+    OpenPecha Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opf-files" class="md-nav__link">
+    OPF Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layers" class="md-nav__link">
+    Layers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Import
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Import" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Import
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../importers/hfml/" class="md-nav__link">
+        HFML
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exporters/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openpecha-repositories" class="md-nav__link">
+    OpenPecha Repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opf-files" class="md-nav__link">
+    OPF Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#layers" class="md-nav__link">
+    Layers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#annotations" class="md-nav__link">
+    Annotations
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="opf-format">OPF Format<a class="headerlink" href="#opf-format" title="Permanent link">&para;</a></h1>
+<h2 id="openpecha-repositories">OpenPecha Repositories<a class="headerlink" href="#openpecha-repositories" title="Permanent link">&para;</a></h2>
+<p>OpenPecha etexts are stored as Git repositories. At its heart, Git is a version control system that manages and stores revisions of digital projects. OpenPecha simply uses Git to store and manage versions of Tibetan texts. Within the Git system, OPF files come with the following branches:</p>
+<ul>
+<li>Master<ul>
+<li>The master branch contains the .opf, which is protected</li>
+<li>Only admins and text owners can directly update the master branch from the other online branches</li>
+</ul>
+</li>
+<li>Publication<ul>
+<li>The publication branch is for collaboratively improving the text</li>
+<li>Only admin or text owners can merge changes from the publication branch to the master branch</li>
+<li>Github action is set up in such a way that it looks for commands issued by the owner in the commits, then updates the .opf in the master branch if there are changes in the publication branch</li>
+</ul>
+</li>
+<li>Custom repos:<ul>
+<li>This is where users outside of the collaboration team can edit text and export the text into a desirable format—so long as the parser can handle the user’s specifications, they can collaborate with OpenPecha to create it</li>
+<li>These edits are not recorded, so they are not used for updating the master branch OPF</li>
+<li>The exported text is released in the “temp” section of the release</li>
+</ul>
+</li>
+<li>Releases<ul>
+<li>Initial section contains the src text as-is; they may be plain text, ebook, HFML, word, etc</li>
+<li>Temp section contains the exported text of the user outside of the collaboration</li>
+<li>V### section contains the official release of the exported text</li>
+</ul>
+</li>
+</ul>
+<h2 id="opf-files">OPF Files<a class="headerlink" href="#opf-files" title="Permanent link">&para;</a></h2>
+<p>OPF is an open folder format, which means it’s not a compiled file, but simply an open folder with a specific hierarchy. Every OpenPecha file consists of a base text (or base texts, in the case of works with multiple volumes) in plain text (ie, v001.txt, also called the base layer) in the “base” folder and its annotations (layer_name.yml) in the corresponding “v001” folder of the “layers” folder. OPF assumes that pecha with a single base layer has only one volume. A sample OPF file might have an internal structure something like this :</p>
+<ul>
+<li>📁  P000780.opf<ul>
+<li>📄 index.yml</li>
+<li>📄 meta.yml</li>
+<li>📁 base<ul>
+<li>v001.txt</li>
+<li>v002.txt</li>
+</ul>
+</li>
+<li>📁 layers<ul>
+<li>📁 v001<ul>
+<li>📄 Title.yml</li>
+<li>📄 Author.yml</li>
+<li>📄 Tsawa.yml</li>
+<li>📄 Yigchung.yml</li>
+</ul>
+</li>
+<li>📁 v002<ul>
+<li>📄 title.yml</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>or follow this live example <a href="https://github.com/OpenPecha/P000001/tree/master/P000001.opf">P0000001</a></p>
+<p>In the example above, the text has the globally unique and persistent identifier “P000780”; its source text is the “base” directory. (In this case, it comes from an image scan and its raw OCR data found in the github release “v0.1”). It is then formatted as an OPF base text. This OPF has annotation layers for metadata (meta.yml), index/toc (index.yml), and titles (title.yml). “Layers” is simply a list of the annotation layers that are linked to the text, and “title” is a layer that gives formatting annotations for titles (similar to the <title></title> inline tag in HTML).</p>
+<p>The key to the format is the Index. The Index splits a text into subsections, and gives these sections unique identifiers (UUIDs). These logical units, for convenience’s sake, use the source document’s splits. Any annotation reference is also then stored in the Index as a unique ID associated with a span of characters. Whenever there’s a change to the base text, these spans are updated. Whenever an annotation is referred to outside the Index, however, it isn’t referred to as a span (as it is in a tag system like XML, for example), but as an ID.</p>
+<h2 id="layers">Layers<a class="headerlink" href="#layers" title="Permanent link">&para;</a></h2>
+<p>Layers are represented by YAML file. They are just collection of a particular types of annotations with some attributes. Here is the example of Correction layer:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2ea1861be051406a858307cd592ef5ec</span>
+<span class="nt">annotation_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Correction</span>
+<span class="nt">revision</span><span class="p">:</span> <span class="s">&#39;00001&#39;</span>
+<span class="nt">annotations</span><span class="p">:</span>
+  <span class="nt">1e19a11e32d54d7897021d5be594d563</span><span class="p">:</span>
+    <span class="nt">correction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">མཆིའོ་</span>
+    <span class="nt">certainty</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
+    <span class="nt">span</span><span class="p">:</span>
+      <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145863</span>
+      <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145868</span>
+  <span class="nt">497e4044c77b4877a233a3c98b267672</span><span class="p">:</span>
+    <span class="nt">correction</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">མཆིའོ་</span>
+    <span class="nt">certainty</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">null</span>
+    <span class="nt">span</span><span class="p">:</span>
+      <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145966</span>
+      <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145971</span>
+</code></pre></div>
+<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
+<p>All the annotations in OPF are just span of start and end character index of the base layer and some attributes of the particular annotation. The most simplest form of annotation is just having the a span. Here is the list of annotation currently supported by OpenPecha</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LayerEnum</span><span class="p">(</span><span class="n">Enum</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span>
+
+    <span class="n">book_title</span> <span class="o">=</span> <span class="s2">&quot;BookTitle&quot;</span>
+    <span class="n">sub_title</span> <span class="o">=</span> <span class="s2">&quot;SubTitle&quot;</span>
+    <span class="n">book_number</span> <span class="o">=</span> <span class="s2">&quot;BookNumber&quot;</span>
+    <span class="n">poti_title</span> <span class="o">=</span> <span class="s2">&quot;PotiTitle&quot;</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="s2">&quot;Author&quot;</span>
+    <span class="n">chapter</span> <span class="o">=</span> <span class="s2">&quot;Chapter&quot;</span>
+
+    <span class="n">topic</span> <span class="o">=</span> <span class="s2">&quot;Text&quot;</span>
+    <span class="n">sub_topic</span> <span class="o">=</span> <span class="s2">&quot;SubText&quot;</span>
+
+    <span class="n">pagination</span> <span class="o">=</span> <span class="s2">&quot;Pagination&quot;</span>
+    <span class="n">citation</span> <span class="o">=</span> <span class="s2">&quot;Citation&quot;</span>
+    <span class="n">correction</span> <span class="o">=</span> <span class="s2">&quot;Correction&quot;</span>
+    <span class="n">error_candidate</span> <span class="o">=</span> <span class="s2">&quot;ErrorCandidate&quot;</span>
+    <span class="n">peydurma</span> <span class="o">=</span> <span class="s2">&quot;Peydurma&quot;</span>
+    <span class="n">sabche</span> <span class="o">=</span> <span class="s2">&quot;Sabche&quot;</span>
+    <span class="n">tsawa</span> <span class="o">=</span> <span class="s2">&quot;Tsawa&quot;</span>
+    <span class="n">yigchung</span> <span class="o">=</span> <span class="s2">&quot;Yigchung&quot;</span>
+    <span class="n">archaic</span> <span class="o">=</span> <span class="s2">&quot;Archaic&quot;</span>
+    <span class="n">durchen</span> <span class="o">=</span> <span class="s2">&quot;Durchen&quot;</span>
+    <span class="n">footnote</span> <span class="o">=</span> <span class="s2">&quot;Footnote&quot;</span>
+    <span class="n">segment</span> <span class="o">=</span> <span class="s2">&quot;Segment&quot;</span>
+</code></pre></div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href=".." class="md-footer__link md-footer__link--prev" aria-label="Previous: Introduction" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Introduction
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../importers/hfml/" class="md-footer__link md-footer__link--next" aria-label="Next: HFML" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              HFML
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.17f42bbf.min.js"></script>
+      
+    
+  </body>
+</html>

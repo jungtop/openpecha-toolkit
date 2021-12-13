@@ -1,0 +1,816 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.1.0">
+    
+    
+      
+        <title>HFML - OpenPecha</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.82f3c0b9.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.9204c3b2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hfml" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="OpenPecha" class="md-header__button md-logo" aria-label="OpenPecha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            OpenPecha
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HFML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="OpenPecha" class="md-nav__button md-logo" aria-label="OpenPecha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    OpenPecha
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Introduction
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opf-format/" class="md-nav__link">
+        OPF Format
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Import
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Import" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Import
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          HFML
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        HFML
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-hfml-files" class="md-nav__link">
+    Import HFML Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagset" class="md-nav__link">
+    Tagset
+  </a>
+  
+    <nav class="md-nav" aria-label="Tagset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagination-tags" class="md-nav__link">
+    Pagination tags
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagination tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    [1]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1a" class="md-nav__link">
+    [1a]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1a1" class="md-nav__link">
+    [1a.1]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-tags" class="md-nav__link">
+    TOC tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footnote-tags" class="md-nav__link">
+    Footnote tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endnote-tags-without-page-reference" class="md-nav__link">
+    Endnote tags without page reference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    (1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1001" class="md-nav__link">
+    [100](1):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spell-checking-tags" class="md-nav__link">
+    Spell-checking tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-aparatus" class="md-nav__link">
+    Critical aparatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout-tags" class="md-nav__link">
+    Layout tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exporters/" class="md-nav__link">
+        Export
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#import-hfml-files" class="md-nav__link">
+    Import HFML Files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tagset" class="md-nav__link">
+    Tagset
+  </a>
+  
+    <nav class="md-nav" aria-label="Tagset">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pagination-tags" class="md-nav__link">
+    Pagination tags
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagination tags">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    [1]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1a" class="md-nav__link">
+    [1a]
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1a1" class="md-nav__link">
+    [1a.1]
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#toc-tags" class="md-nav__link">
+    TOC tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#footnote-tags" class="md-nav__link">
+    Footnote tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#endnote-tags-without-page-reference" class="md-nav__link">
+    Endnote tags without page reference
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    (1)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1001" class="md-nav__link">
+    [100](1):
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spell-checking-tags" class="md-nav__link">
+    Spell-checking tags
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#critical-aparatus" class="md-nav__link">
+    Critical aparatus
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#layout-tags" class="md-nav__link">
+    Layout tags
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    Notes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    Sources
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+<h1 id="hfml">HFML<a class="headerlink" href="#hfml" title="Permanent link">&para;</a></h1>
+<p>HFML stands for The human-friendly markup language</p>
+<h2 id="import-hfml-files">Import HFML Files<a class="headerlink" href="#import-hfml-files" title="Permanent link">&para;</a></h2>
+<p>Here is the hfml file <a href="https://raw.githubusercontent.com/OpenPecha-dev/openpecha-toolkit/master/tests/formatters/hfml/data/kangyur_01.txt">kangyur_01</a> used in following code snippet.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
+
+<span class="kn">from</span> <span class="nn">openpecha.formatters</span> <span class="kn">import</span> <span class="n">HFMLFormatter</span>
+
+<span class="n">hfml_fn</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;tests&quot;</span><span class="p">)</span> <span class="o">/</span> <span class="s2">&quot;formatters&quot;</span> <span class="o">/</span> <span class="s2">&quot;hfml&quot;</span> <span class="o">/</span> <span class="s2">&quot;data&quot;</span> <span class="o">/</span> <span class="s2">&quot;kangyur_01.txt&quot;</span>
+<span class="n">m_text</span> <span class="o">=</span> <span class="n">hfml_fn</span><span class="o">.</span><span class="n">read_text</span><span class="p">()</span>
+
+<span class="n">formatter</span> <span class="o">=</span> <span class="n">HFMLFormatter</span><span class="p">()</span>
+
+<span class="n">text</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">text_preprocess</span><span class="p">(</span><span class="n">m_text</span><span class="p">)</span>
+<span class="n">formatter</span><span class="o">.</span><span class="n">build_layers</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="nb">len</span><span class="p">([</span><span class="n">text</span><span class="p">]))</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">formatter</span><span class="o">.</span><span class="n">get_base_text</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="tagset">Tagset<a class="headerlink" href="#tagset" title="Permanent link">&para;</a></h2>
+<h3 id="pagination-tags">Pagination tags<a class="headerlink" href="#pagination-tags" title="Permanent link">&para;</a></h3>
+<h4 id="1"><code>[1]</code><a class="headerlink" href="#1" title="Permanent link">&para;</a></h4>
+<p><strong>Type:</strong> Pagination</p>
+<p><strong>Syntax:</strong> <code>[&lt;page number&gt;]</code></p>
+<p><strong>Use:</strong> Mark for modern pagination information in modern book or arabic page numbers in traditional text layout.</p>
+<p><strong>Text Sample:</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/17675331/144010744-750229ef-0e79-4952-9403-a6dc1b14f492.png" /></p>
+<p><code>[360]</code>
+<code>༄༅། །རྒྱ་གར་སྐད་དུ། དྷརྨ་ཙཀྲ་པྲ་བརྟ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། ཆོས་ཀྱི་འཁོར་ལོ་རབ་ཏུ་བསྐོར་བའི་མདོ། [..]</code>
+<code>དྲང་སྲོང་ལྷུང་བ་རི་དགས་རྒྱུ་བའི་གནས་ན་བཞུགས་སོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དགེ་སློང་ལྔ་སྡེ་རྣམས་བོས་ཏེ་བཀའ་[..]</code>
+<code>དང་དམན་པར་འགྱུར་རོ། །སོ་སོའི་སྐྱེ་བོ་རྣམས་ནི་དོན་མེད་པ་དང་ལྡན་པའི་ཕྱིར་གང་སུ་དག་ལུས་དུབ་པ་དང་འབྲལ་བའི་སྡུག་[..]</code>  </p>
+<hr />
+<h4 id="1a"><code>[1a]</code><a class="headerlink" href="#1a" title="Permanent link">&para;</a></h4>
+<p><strong>Type:</strong> Pecha folio pagination</p>
+<p><strong>Syntax:</strong> <code>[&lt;page number&gt;&lt;a/b side&gt;]</code></p>
+<p><strong>Use:</strong> Tag for traditional pecha page numbers spelled out in Tibetan on the front side of a folio.</p>
+<p><strong>Text Sample:</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/17675331/144010914-f86f66d9-6d41-4fd6-b271-3e8924d38ee5.png" /></p>
+<p><code>[180b]</code>
+<code>༄༅། །རྒྱ་གར་སྐད་དུ། དྷརྨ་ཙཀྲ་པྲ་བརྟ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། ཆོས་ཀྱི་འཁོར་ལོ་རབ་ཏུ་བསྐོར་བའི་མདོ། [..]</code>
+<code>དྲང་སྲོང་ལྷུང་བ་རི་དགས་རྒྱུ་བའི་གནས་ན་བཞུགས་སོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དགེ་སློང་ལྔ་སྡེ་རྣམས་བོས་ཏེ་བཀའ་[..]</code>
+<code>དང་དམན་པར་འགྱུར་རོ། །སོ་སོའི་སྐྱེ་བོ་རྣམས་ནི་དོན་མེད་པ་དང་ལྡན་པའི་ཕྱིར་གང་སུ་དག་ལུས་དུབ་པ་དང་འབྲལ་བའི་སྡུག་[..]</code>  </p>
+<p><a href="https://github.com/OpenPecha/hfml#tagset">back to top</a></p>
+<hr />
+<h4 id="1a1"><code>[1a.1]</code><a class="headerlink" href="#1a1" title="Permanent link">&para;</a></h4>
+<p><strong>Type:</strong> Pecha pagination</p>
+<p><strong>Syntax:</strong> <code>[&lt;page number&gt;&lt;a/b side&gt;.&lt;line number&gt;]</code></p>
+<p><strong>Use:</strong> Tag for line numbers in traditional pecha layout.</p>
+<p><strong>Text Sample:</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/17675331/144011119-bd4474a8-6fc3-44fa-b254-0aa2a4df228b.png" /></p>
+<p><code>[180b]</code>
+<code>[180b.1]༄༅། །རྒྱ་གར་སྐད་དུ། དྷརྨ་ཙཀྲ་པྲ་བརྟ་ན་སཱུ་ཏྲ། བོད་སྐད་དུ། ཆོས་ཀྱི་འཁོར་ལོ་རབ་ཏུ་བསྐོར་བའི་མདོ། [..]</code>
+<code>[180b.2]དྲང་སྲོང་ལྷུང་བ་རི་དགས་རྒྱུ་བའི་གནས་ན་བཞུགས་སོ། །དེ་ནས་བཅོམ་ལྡན་འདས་ཀྱིས་དགེ་སློང་ལྔ་སྡེ་རྣམས་བོས་ཏེ་བཀའ་[..]</code>
+<code>[180b.3]དང་དམན་པར་འགྱུར་རོ། །སོ་སོའི་སྐྱེ་བོ་རྣམས་ནི་དོན་མེད་པ་དང་ལྡན་པའི་ཕྱིར་གང་སུ་དག་ལུས་དུབ་པ་དང་འབྲལ་བའི་སྡུག་[..]</code>  </p>
+<p><a href="https://github.com/OpenPecha/hfml#tagset">back to top</a></p>
+<hr />
+<h3 id="toc-tags">TOC tags<a class="headerlink" href="#toc-tags" title="Permanent link">&para;</a></h3>
+<p><code>{T###}</code> text ID</p>
+<p><code>{T###-##}</code> section/chapter ID</p>
+<p><a href="https://github.com/OpenPecha/hfml#tagset">back to top</a></p>
+<hr />
+<hr />
+<h3 id="footnote-tags">Footnote tags<a class="headerlink" href="#footnote-tags" title="Permanent link">&para;</a></h3>
+<p><code>[^##]</code> inline note marker
+<code>[^##]:</code> note content prefix</p>
+<h3 id="endnote-tags-without-page-reference">Endnote tags without page reference<a class="headerlink" href="#endnote-tags-without-page-reference" title="Permanent link">&para;</a></h3>
+<p><code>(##)</code> endnote marker
+<code>(##):</code> endnote content prefix</p>
+<p><code>[###](##):</code> endnote content prefix</p>
+<hr />
+<h3 id="1_1"><code>(1)</code><a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Note maker</p>
+<p><strong>Syntax:</strong> <code>(&lt;note number&gt;)]</code></p>
+<p><strong>Use:</strong> Marker for both footnotes and endnotes</p>
+<p><strong>Text Sample:</strong></p>
+<p><img alt="image" src="https://user-images.githubusercontent.com/17675331/144013558-e719c85f-8158-4187-b006-44829d40d228.png" /></p>
+<p><code>[517]</code>
+<code>༄༅། །ཆོས་ཀྱི་འཁོར་ལོ་རབ་ཏུ་བསྐོར་བའི་མདོ།(1)</code></p>
+<p><a href="https://github.com/OpenPecha/hfml#tagset">back to top</a></p>
+<hr />
+<h3 id="1001"><code>[100](1):</code><a class="headerlink" href="#1001" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> Endnote content prefix</p>
+<p><strong>Syntax:</strong> <code>[&lt;page reference&gt;](&lt;note number&gt;)]</code></p>
+<p><strong>Use:</strong> Marker for the content of endnotes located at the end of texts.</p>
+<p><strong>Text Sample:</strong></p>
+<p><img alt="" src="https://user-images.githubusercontent.com/17675331/144018718-802beb99-326b-4bc7-9323-bbf6fe7e2b3f.png" /></p>
+<p><code>[517](1) མཚན་བྱང་འདི་ཆོས་ཚན་འདིའི་མཚན་བོད་སྐད་དུ་སྨོས་པ་[..]</code>
+<code>མདོ་ཚན་བཅུ་གསུམ་སྣར་ཐང་པར་དུ་མདོ་ཨ་པའི་གཤམ་དུ་[..]</code></p>
+<p><a href="https://github.com/OpenPecha/hfml#tagset">back to top</a></p>
+<hr />
+<h3 id="spell-checking-tags">Spell-checking tags<a class="headerlink" href="#spell-checking-tags" title="Permanent link">&para;</a></h3>
+<p><strong>Type:</strong> potential error, correction suggestion</p>
+<p><strong>Syntax:</strong> <code>(error,suggestion)</code> </p>
+<p><strong>Use:</strong> Marker for the content of endnotes located at the end of texts.</p>
+<p><strong>Text Sample:</strong></p>
+<hr />
+<h3 id="critical-aparatus">Critical aparatus<a class="headerlink" href="#critical-aparatus" title="Permanent link">&para;</a></h3>
+<p><code>[? ]</code> uncertain reading</p>
+<p><code>\&lt;* \&gt;</code> editorial restoration of lost text</p>
+<p><code>⟨* ⟩</code> editorial addition of omitted text</p>
+<p><code>⟪ ⟫</code> scribal insertion</p>
+<p><code>{ }</code> editorial deletion of redundant text</p>
+<p><code>{{ }}</code> scribal deletion</p>
+<p><code>///</code> textual loss at left or right edge of support</p>
+<h3 id="layout-tags">Layout tags<a class="headerlink" href="#layout-tags" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>བོད། bo</th>
+<th>ཨིན། en</th>
+<th>རྟགས། tag</th>
+<th>དཔེར་བརྗོད། Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ཡིག་ཆུང་།</td>
+<td>contains smaller text size</td>
+<td>\<y...y></td>
+<td>\<yབཤད་སྒྲུབ་བསྟན་པའི་འབྱུང་གནས་དཔལ་ལྡན་བཀྲ་ཤིས་འཁྱིལ་དུ་རབ་བྱུང་བཅུ་བཞི་པའི་ལྕགས་སྤྲེལ་གྱི་ལོར་པར་དུ་བསྐྲུན་པ་དགེ་ལེགས་འཕེལ། སརྦ་མངྒ་ལཾ། །y></td>
+</tr>
+<tr>
+<td>མཛད་པ་པོ།</td>
+<td>Name\<s> of an author, personal or corporate, of a work.</td>
+<td>\<au....></td>
+<td>\<auམཛད་པ་པོ། མཁས་གྲུབ་ཀརྨ་ཆགས་མེད། གཏེར་ཆེན་ཀརྨ་གླིང་པ།></td>
+</tr>
+<tr>
+<td>དཔེ་ཆའི་མཚན་བྱང་།</td>
+<td>contains pecha title</td>
+<td>\<k1.......></td>
+<td>\<k1བྱང་ཆུབ་སེམས་དཔའི་སྤྱོད་པ་ལ་འཇུག་པ་བཞུགས་སོ།།></td>
+</tr>
+<tr>
+<td>པོ་ཏིའི་མཚན་བྱང་།</td>
+<td>contains poti title</td>
+<td>\<k2.......></td>
+<td>\<k2༄༅། །འདུལ་བ་ཀ་བཞུགས་སོ། །></td>
+</tr>
+<tr>
+<td>ལེའུ་ཡི་མཚན་བྱང་།</td>
+<td>contains chapter title</td>
+<td>\<k3.......></td>
+<td>\<k3དཀོན་མཆོག་གསུམ་ལ་ཕྱག་འཚལ་ལོ། །></td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>we don't encode lines as annotations and generate them on the fly from the pagination layer and line returns in the base</li>
+</ul>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">&para;</a></h2>
+<ul>
+<li>https://ubsicap.github.io/usfm/</li>
+<li>[gandhari.org]\&lt;https://gandhari.org/a_dpreface.php></li>
+<li>[esukhia/derge-kangyur]\&lt;https://github.com/Esukhia/derge-kangyur></li>
+<li>https://www.markdownguide.org/extended-syntax/#fn:bignote</li>
+</ul>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../opf-format/" class="md-footer__link md-footer__link--prev" aria-label="Previous: OPF Format" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              OPF Format
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../exporters/" class="md-footer__link md-footer__link--next" aria-label="Next: Export" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Export
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.cefbb252.min.js"}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.17f42bbf.min.js"></script>
+      
+    
+  </body>
+</html>
