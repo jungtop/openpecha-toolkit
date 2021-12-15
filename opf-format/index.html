@@ -247,9 +247,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotations" class="md-nav__link">
-    Annotations
+  <a href="#types-of-layer" class="md-nav__link">
+    Types of layer
   </a>
+  
+    <nav class="md-nav" aria-label="Types of layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-layer" class="md-nav__link">
+    Index layer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -268,22 +281,37 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../annotations/" class="md-nav__link">
+        Annotations
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
       
       
       
       
-        <label class="md-nav__link" for="__nav_3">
+        <label class="md-nav__link" for="__nav_4">
           Import
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Import" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Import
         </label>
@@ -372,9 +400,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#annotations" class="md-nav__link">
-    Annotations
+  <a href="#types-of-layer" class="md-nav__link">
+    Types of layer
   </a>
+  
+    <nav class="md-nav" aria-label="Types of layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#index-layer" class="md-nav__link">
+    Index layer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -451,7 +492,7 @@
 <p>In the example above, the text has the globally unique and persistent identifier “P000780”; its source text is the “base” directory. (In this case, it comes from an image scan and its raw OCR data found in the github release “v0.1”). It is then formatted as an OPF base text. This OPF has annotation layers for metadata (meta.yml), index/toc (index.yml), and titles (title.yml). “Layers” is simply a list of the annotation layers that are linked to the text, and “title” is a layer that gives formatting annotations for titles (similar to the <title></title> inline tag in HTML).</p>
 <p>The key to the format is the Index. The Index splits a text into subsections, and gives these sections unique identifiers (UUIDs). These logical units, for convenience’s sake, use the source document’s splits. Any annotation reference is also then stored in the Index as a unique ID associated with a span of characters. Whenever there’s a change to the base text, these spans are updated. Whenever an annotation is referred to outside the Index, however, it isn’t referred to as a span (as it is in a tag system like XML, for example), but as an ID.</p>
 <h2 id="layers">Layers<a class="headerlink" href="#layers" title="Permanent link">&para;</a></h2>
-<p>Layers are represented by YAML file. They are just collection of a particular types of annotations with some attributes. Here is the example of Correction layer:</p>
+<p>Layers are represented by YAML file. They are just collection of a particular types of <a href="../annotations/">annotations</a> with some attributes. Here is the example of Correction layer:</p>
 <div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">2ea1861be051406a858307cd592ef5ec</span>
 <span class="nt">annotation_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Correction</span>
 <span class="nt">revision</span><span class="p">:</span> <span class="s">&#39;00001&#39;</span>
@@ -469,9 +510,8 @@
       <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145966</span>
       <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">145971</span>
 </code></pre></div>
-<h2 id="annotations">Annotations<a class="headerlink" href="#annotations" title="Permanent link">&para;</a></h2>
-<p>All the annotations in OPF are just span of start and end character index of the base layer and some attributes of the particular annotation. The most simplest form of annotation is just having the a span. Here is the list of annotation currently supported by OpenPecha</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LayerEnum</span><span class="p">(</span><span class="n">Enum</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+<h2 id="types-of-layer">Types of layer<a class="headerlink" href="#types-of-layer" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">LayerEnum</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
     <span class="n">index</span> <span class="o">=</span> <span class="s2">&quot;index&quot;</span>
 
     <span class="n">book_title</span> <span class="o">=</span> <span class="s2">&quot;BookTitle&quot;</span>
@@ -497,6 +537,28 @@
     <span class="n">footnote</span> <span class="o">=</span> <span class="s2">&quot;Footnote&quot;</span>
     <span class="n">segment</span> <span class="o">=</span> <span class="s2">&quot;Segment&quot;</span>
 </code></pre></div>
+<h3 id="index-layer">Index layer<a class="headerlink" href="#index-layer" title="Permanent link">&para;</a></h3>
+<p>similar to <em>table of content</em>, contains <em>Text</em> and <em>SubText</em> annotations.</p>
+<p>here is an example of index layer.
+<div class="highlight"><pre><span></span><code><span class="nt">id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">68f9113d7a7f4f97b1c61af77251e6d7</span>
+<span class="nt">annotation_type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">revision</span><span class="p">:</span> <span class="s">&#39;00001&#39;</span>
+<span class="nt">annotations</span><span class="p">:</span>
+  <span class="nt">51f58796058b461ab32f3c972ee5417c</span><span class="p">:</span>
+    <span class="nt">work_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">T1</span>
+    <span class="nt">parts</span><span class="p">:</span>
+      <span class="nt">3cbe647abf404688a79c24d14742826c</span><span class="p">:</span>
+        <span class="nt">work_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">T1-1</span>
+        <span class="nt">span</span><span class="p">:</span>
+        <span class="p p-Indicator">-</span> <span class="nt">vol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+          <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">27</span>
+          <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">396711</span>
+    <span class="nt">span</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">vol</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
+      <span class="nt">start</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">27</span>
+      <span class="nt">end</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">934579</span>
+</code></pre></div></p>
+<p>here is the live example of <a href="https://github.com/OpenPecha/P000001/blob/master/P000001.opf/index.yml">P000001</a></p>
 
               
             </article>
@@ -526,13 +588,13 @@
       
       
         
-        <a href="../importers/hfml/" class="md-footer__link md-footer__link--next" aria-label="Next: HFML" rel="next">
+        <a href="../annotations/" class="md-footer__link md-footer__link--next" aria-label="Next: Annotations" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              HFML
+              Annotations
             </div>
           </div>
           <div class="md-footer__button md-icon">
