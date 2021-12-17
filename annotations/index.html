@@ -736,7 +736,7 @@
 <details>
 <summary>JSON Schema</summary>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Citation&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Correction&quot;</span><span class="p">,</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;object&quot;</span><span class="p">,</span>
   <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;span&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -781,11 +781,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Citation</span><span class="p">,</span> <span class="n">Span</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Correction</span><span class="p">,</span> <span class="n">Span</span>
 
-<span class="n">citation</span> <span class="o">=</span> <span class="n">Citation</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+<span class="n">correction</span> <span class="o">=</span> <span class="n">Correction</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
 
-<span class="k">assert</span> <span class="n">citation</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
+<span class="k">assert</span> <span class="n">correction</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
