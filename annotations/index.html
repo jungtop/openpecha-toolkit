@@ -839,7 +839,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">ErrorCandidate</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">error_candidate</span> <span class="o">=</span> <span class="n">ErrorCandidate</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">error_candidate</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -893,7 +897,11 @@
 
 <details>
 <summary>Python example:</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Pedurma</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">pedurma</span> <span class="o">=</span> <span class="n">Pedurma</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">pedurma</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -947,7 +955,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Sabche</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">sabche</span> <span class="o">=</span> <span class="n">Sabche</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">sabche</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1001,7 +1013,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Span</span><span class="p">,</span> <span class="n">Tsawa</span>
+
+<span class="n">tsawa</span> <span class="o">=</span> <span class="n">Tsawa</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">tsawa</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1055,7 +1071,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Span</span><span class="p">,</span> <span class="n">Yigchung</span>
+
+<span class="n">yigchung</span> <span class="o">=</span> <span class="n">Yigchung</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">yigchung</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1109,7 +1129,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Archaic</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">archaic</span> <span class="o">=</span> <span class="n">Archaic</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">archaic</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1163,7 +1187,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Durchen</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">durchen</span> <span class="o">=</span> <span class="n">Durchen</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">durchen</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1217,7 +1245,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Footnote</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">footnote</span> <span class="o">=</span> <span class="n">Footnote</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">footnote</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1271,7 +1303,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Segment</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">segment</span> <span class="o">=</span> <span class="n">Segment</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">segment</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
@@ -1360,7 +1396,11 @@
 
 <details>
 <summary>Python example</summary>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">openpecha.core.annotations</span> <span class="kn">import</span> <span class="n">Pagination</span><span class="p">,</span> <span class="n">Span</span>
+
+<span class="n">pagination</span> <span class="o">=</span> <span class="n">Pagination</span><span class="p">(</span><span class="n">span</span><span class="o">=</span><span class="n">Span</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="mi">30</span><span class="p">))</span>
+
+<span class="k">assert</span> <span class="n">pagination</span><span class="o">.</span><span class="n">span</span><span class="o">.</span><span class="n">start</span> <span class="o">==</span> <span class="mi">10</span>
 </code></pre></div>
 </details>
 
